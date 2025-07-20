@@ -94,15 +94,16 @@ This project implements a neural image caption generator that:
 │   └── Image_Caption_Generator.ipynb  # Main development notebook
 │
 ├── src/                    # Source code
-│   ├── config.py           # Configuration parameters
-│   ├── dataloader.py       # Data pipeline
-│   ├── model.py            # CNN-LSTM architecture
-│   ├── train.py            # Training script
-│   ├── evaluate.py         # Evaluation metrics
-│   └── utils/              # Helper modules
+│   ├── BUEU_score.py.py     
+│   ├── custom_cnn.py.py       
+│   ├── lstm.py          
+│   ├── predictions.py          
+│   ├── sample_image.py    
+│   ├── text_preprocess.py          
+│   ├── visualization.py        
+│      
 │
 ├── outputs/                # Generated artifacts
-│   ├── models/             # Saved model weights
 │   └── predictions/        # Sample outputs
 │
 ├── report/                 # Project documentation
