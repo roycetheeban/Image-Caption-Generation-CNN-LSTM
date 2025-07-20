@@ -110,3 +110,111 @@ This project implements a neural image caption generator that:
 │
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
+
+
+## ⚙️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/image-caption-generator.git
+   cd image-caption-generator
+   ```
+
+2. **Install dependencies**
+   Make sure Python 3.7 or above is installed. Then run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download the dataset**
+
+   - 📥 [Flickr8k Dataset (Images)](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip)
+   - 📝 [Flickr8k Captions (Text)](https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip)
+
+   After downloading, extract the files like this:
+
+   ```
+   data/
+   ├── images/
+   │   └── Flickr8k_Dataset/
+   └── captions/
+       └── Flickr8k.token.txt
+   ```
+
+4. **Verify Folder Structure**
+   Ensure the folders look like:
+   ```
+   image-caption-generator/
+   ├── data/
+   ├── src/
+   ├── outputs/
+   ├── notebooks/
+   ├── requirements.txt
+   └── README.md
+   ```
+
+---
+
+## 🚀 Usage
+
+You can either run the training and evaluation via `.py` scripts or Jupyter Notebook.
+
+### 1. Preprocess and prepare data
+```bash
+python src/preprocess.py
+```
+
+### 2. Train the model
+```bash
+python src/train.py
+```
+
+### 3. Evaluate model and generate captions
+```bash
+python src/evaluate.py
+```
+
+### 4. Jupyter Notebook (Alternative)
+Open the notebook to run all steps interactively:
+```bash
+jupyter notebook notebooks/Image_Caption_Generator.ipynb
+```
+
+---
+
+## 📊 Results
+
+- Model was trained on **Flickr8k** dataset using **VGG16** for image feature extraction and **LSTM** for text generation.
+- Evaluation was done using **BLEU score** and visual inspection of generated captions.
+- Outputs are saved under:
+  ```
+  outputs/
+  ├── model/
+  ├── predictions/
+  └── BLEU_scores/
+  ```
+
+### 🔍 Sample Output Caption
+```text
+Image: A man riding a bicycle on a dirt road
+Generated: a man is riding a bike on a road
+```
+
+> ⚠️ **Note:** The prediction accuracy is limited due to the small dataset and low training epochs. Using a larger dataset (e.g., MSCOCO) and more epochs will improve results.
+
+---
+
+## 🔮 Future Work
+
+- 🧠 Fine-tune on larger datasets like **MS COCO** or **Flickr30k**.
+- 🖼️ Integrate more powerful feature extractors like **EfficientNet** or **ResNet50**.
+- 🌐 Build a **Streamlit** or **Flask** based web interface for live image captioning.
+- 💬 Improve caption quality using **Transformer-based models** like **ViT + GPT2** or **BLIP**.
+- ⚙️ Add experiment tracking and better logging using tools like **MLflow** or **Weights & Biases**.
+- 🔁 Support for multilingual caption generation (using pre-trained multilingual embeddings).
+
+---
+
+## 📄 License
+
+This project is open-source under the MIT License.
