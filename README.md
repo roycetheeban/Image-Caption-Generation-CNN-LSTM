@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Deep Learning](https://img.shields.io/badge/Deep_Learning-CNN--LSTM-red)
 
-An end-to-end deep learning solution that automatically generates human-like descriptions for images using a hybrid CNN-LSTM neural network architecture.
+A deep learning solution that automatically generates human-like descriptions for images using a hybrid CNN-LSTM neural network architecture.
 
 ## 📌 Table of Contents
 - [Project Overview](#-project-overview)
@@ -111,6 +111,7 @@ This project implements a neural image caption generator that:
 │
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
+
 
 
 ## ⚙️ Installation
